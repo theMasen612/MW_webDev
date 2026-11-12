@@ -1,67 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head> 
-        <title>Alignment</title>
+<html>
+    <head>
+        <title>Alignment Notes</title>
         <meta charset="UTF-8">
         <style>
-            button{ 
-                padding: 20px;
-                margin: 4px;
-                margin-left: 550px;
+            button{
+                padding:20px;
+                margin-left:45%;
             }
-            #box{ 
-                width: 75px; 
-                height: 75px;
-                background-color:seagreen; 
+            #box, #boxTwo{
+                width:75px;
+                height:75px;
+                background-color:darkslategrey;
                 color:azure;
-                text-align: center;
-               
+                text-align:center;
             }
-            #box-wraper{
-                display: grid;
+            #box-wrapper{
+                display:grid;
                 grid-template-columns: 1fr 200px 1fr;
                 gap: 5px;
             }
             #flex-wrapper{
-                display: flex;
+                display:flex;
                 flex-direction: row;
-                justify-content-space/between: center;
+                justify-content:space-between;
+                flex-wrap: wrap;
             }
-            
         </style>
     </head>
-    <body> 
-        <h1> Alingnment notes</h1>
-        <div id="box-wraper">
-            <div id="box">
-                <p> Box 1</p>
+    <body>
+        <h1>Alignment Notes</h1>
+        <div id="box-wrapper">
+            <div id="boxTwo">
+                <p>Box 1</p>
             </div>
             <div id="box">
-                <P> Box 2</P>
+                <p>Box 2</p>
             </div>
             <div id="box">
-                <p> Box 3
-                </p>
+                <p>Box 3</p>
             </div>
-            <div id="box"> 
-                <p> Box 4</p>
+            <div id="box">
+                <p>Box 4</p>
             </div>
         </div>
-        <div id="flex-wraper">
+        <div id="flex-wrapper">
             <div id="box">
-                <p> Box 1</p>
+                <p>Box 1</p>
             </div>
             <div id="box">
-                <P> Box 2</P>
+                <p>Box 2</p>
             </div>
             <div id="box">
-                <p> Box 3
-                </p>
+                <p>Box 3</p>
             </div>
-            <div id="box"> 
-                <p> Box 4</p>
+            <div id="box">
+                <p>Box 4</p>
             </div>
         </div>
-        <button> click me </button>
+        <input type="color" id="colorPicker">
+        <button onClick="color()">Click me</button>
+
+        <script> 
+            function color(){ 
+                let newColor = document. getElementById("colorPicker").value
+                document.getElementById("box").style.backgroundColor = newColor
+            }
+            function dissapear(){
+                document.getElementById("box").style.display = 'none'
+            }
+        </script>
     </body>
 </html>
