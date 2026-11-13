@@ -1,71 +1,94 @@
-
 <!DOCTYPE html>
 <html>
-   <head>
-       <title>Crocheting Basics</title>
-       <meta charset="UTF-8">
-       <style> 
-        #pictures-of-crocheting{
-            background-color:
-            color:rgb(225, 226, 214);
-            border: dashed 5px rgb(197, 113, 145);
-         }
-         #history-of-crocheting{ 
-            background-color: #f1c2ba;
-            color:#ffa89a;;
-            border: dashed  rgb(197, 113, 145);
-         }
-         body{ 
-            background-color: #ffeff0;
-                    }
-         #basic-crocheting-suplies{ 
-            background-color: lavenderblush;
-            color:pink;
-            border: dashed 5px pink;
-         }
-         #header{ 
-            color: pink;
-         }
-         #h1{
-            text-align: center;
-            
-          }
-          #image1{
-            width: 120%;
-            height: 120%;
-          }
-          #head1{
-            font-family: "Roboto", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: <weight>;
-            font-style: normal;
-            font-variation-settings:"wdth" 100;
-            font-size: 50px;
-            
-    
-          }
-          #font{
-            font-family: "Open Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: <weight>;
-            font-style: normal;
-            font-variation-settings: "wdth" 100;
-           
-          }
-        
-       </style>
-   </head>s
-   
+    <head>
+        <title>Crocheting Basics</title>
+        <meta charset="UTF-8">
 
+        <style>
+
+            @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+            body {
+                background-color: #FFF8EF;
+                margin: 20px;
+                padding: 15px;
+                font-family: "Lora", Georgia, serif;
+                color: #805866;
+            }
+
+            #header {
+                background-color: #FCE4EC;
+                color: #C9829B;
+                text-align: center;
+                margin: 20px;
+                padding: 20px;
+            }
+
+            #head1 {
+                text-align: center;
+                font-size: 50px;
+                font-weight: bold;
+            }
+
+            #font {
+                font-family: "Lora", Georgia, serif;
+                font-size: 16px;
+                color: #805866;
+            }
+
+            #history-of-crocheting {
+                background-color: #FCE4EC;
+                color: #805866;
+                border: dashed 3px #C9829B;
+                margin: 20px;
+                padding: 20px;
+            }
+
+            #pictures-of-crocheting {
+                background-color: #F5F0E8;
+                color: #A66C82;
+                border: dashed 4px #B7C9AE;
+                margin: 20px;
+                padding: 20px;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            #pictures-of-crocheting h3 {
+                grid-column: 1 / 3;
+            }
+
+            #pictures-of-crocheting img {
+                width: 100%;
+            }
+
+            #basic-crocheting-suplies {
+                background-color: #EAF0E5;
+                color: #61745C;
+                border: dashed 4px #B7C9AE;
+                margin: 20px;
+                padding: 20px;
+            }
+
+            #basic-crocheting-suplies img {
+                width: 300px;
+            }
+
+            a {
+                color: #B45F83;
+            }
+
+        </style>
+    </head>
 
     <body>
 
         <div id="header">
 
-            <div id="h1">
-                <div id="head1">
-                    <h1>CROCHETING 101</h1>
-                </div>
+            <div id="head1">
+                <h1>CROCHETING 101</h1>
             </div>
 
             <div id="font">
@@ -103,17 +126,19 @@
 
             <h3>Pictures of Crocheting</h3>
 
-            <div id="image1">
+            <div>
                 <img
                     src="https://tse4.mm.bing.net/th/id/OIP.9gqDPLtcB36Z8eAnujn2TwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
                     alt="Yarn and crafting supplies"
                 >
             </div>
 
-            <img
-                src="https://www.sheknows.com/wp-content/uploads/2020/05/best-crochet-pattern-books-amazon.jpg?w=1137"
-                alt="Handmade craft project"
-            >
+            <div>
+                <img
+                    src="https://www.sheknows.com/wp-content/uploads/2020/05/best-crochet-pattern-books-amazon.jpg?w=1137"
+                    alt="Handmade craft project"
+                >
+            </div>
 
         </div>
 
@@ -138,4 +163,3 @@
 
     </body>
 </html>
-
