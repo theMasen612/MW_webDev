@@ -79,6 +79,11 @@
             a {
                 color: #B45F83;
             }
+            button{ 
+                background-color:#e9cbd7;
+                color:#805866;
+                padding:20px;
+            }
 
         </style>
     </head>
@@ -149,6 +154,7 @@
             <img
                 src="https://i.etsystatic.com/35418212/r/il/fbc20e/4864343425/il_fullxfull.4864343425_49st.jpg"
                 alt="Yarn and crafting supplies"
+                id="crocheting"
             >
 
             <ul>
@@ -158,8 +164,20 @@
                 <li>a lot of positivity</li>
                 <li>and a lot of fun!</li>
             </ul>
+            <br>
+           
+            <script>
+                //makes the webpage interactive
+             let images = ["https://tse2.mm.bing.net/th/id/OIP.NlDZKHv6XXDPo8MFlVPGjwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3, https://i.etsystatic.com/35418212/r/il/fbc20e/4864343425/il_fullxfull.4864343425_49st.jpg"]
+        let current = 0
+        function changeImage(){
+            current+= 1
+            if (current > 3){
+                current = 0
+            }
+            document.getElementById("crocheting").src = images[current]
+        }
 
-        </div>
-
+         </script>
     </body>
 </html>

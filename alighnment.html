@@ -8,7 +8,7 @@
                 padding:20px;
                 margin-left:45%;
             }
-            #box, #boxTwo{
+            #box, #box2{
                 width:75px;
                 height:75px;
                 background-color:darkslategrey;
@@ -21,20 +21,29 @@
                 gap: 5px;
             }
             #flex-wrapper{
+                display: none;
                 display:flex;
                 flex-direction: row;
                 justify-content:space-between;
                 flex-wrap: wrap;
             }
+            #showMore{
+
+
+            }
         </style>
     </head>
     <body>
         <h1>Alignment Notes</h1>
+         <img src="https://images.pexels.com/photos/31579068/pexels-photo-31579068.jpeg?cs=srgb&dl=pexels-luke-sinclair-2150962445-31579068.jpg&fm=jpg" alt="duck" id="duck" onmouseout="changeImage()">
         <div id="box-wrapper">
-            <div id="boxTwo">
+
+
+        <div id="box-wrapper">
+            <div id="box" onmouseover="disappear()" onmouseout="appear()">
                 <p>Box 1</p>
             </div>
-            <div id="box">
+            <div id="box2">
                 <p>Box 2</p>
             </div>
             <div id="box">
@@ -59,16 +68,44 @@
             </div>
         </div>
         <input type="color" id="colorPicker">
-        <button onClick="color()">Click me</button>
+        <br>
+            <button onClick="color()">Click me</button>
+            <button id="showMore" onClick="show()">Show More</button>
+            <script>
+                //makes the webpage interactive
+             let images = ["https://tse1.mm.bing.net/th/id/OIP.RkNPsguZ3fxA7bI2sV_46AHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3, https://cdn.mos.cms.futurecdn.net/ohsXtgy8Hmi9PzDNpKhJ5N.jpg, https://tse4.mm.bing.net/th/id/OIP.-DyaXAhwvbSHmM2WBxIl0QHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3, https://images.pexels.com/photos/31579068/pexels-photo-31579068.jpeg?cs=srgb&dl=pexels-luke-sinclair-2150962445-31579068.jpg&fm=jpg"]
+        let current = 0
+        function changeImage(){
+            current+= 1
+            if (current > 3){
+                current = 0
+            }
+            document.getElementById("duck").src = images[current]
+        }
 
-        <script> 
-            function color(){ 
-                let newColor = document. getElementById("colorPicker").value
-                document.getElementById("box").style.backgroundColor = newColor
-            }
-            function dissapear(){
-                document.getElementById("box").style.display = 'none'
-            }
-        </script>
+
+                function color(){
+                    let newColor = document.getElementById("colorPicker").value
+                    document.getElementById("box").style.backgroundColor = newColor
+                }
+                function disappear(){
+                    document.getElementById("box2").style.display = 'none'
+                }
+                function appear(){
+                    document.getElementById("box2").style.display = 'block'
+                }
+                function show(){
+                    let element = document.getElementById("flex-wrapper")
+                    if (element.style.display == "flex"){
+                        element.style.display = "none"
+                        document.getElementById("showMore").innerHTML = "show More"
+                    }else{
+                        element.style.display = "flex"
+                        document.getElementById("showMore").innerHTML = "Show Less"
+                    }
+                }
+            </script>
     </body>
 </html>
+
+
