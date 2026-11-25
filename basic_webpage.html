@@ -1,226 +1,360 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Crocheting Basics</title>
-        <meta charset="UTF-8">
+<head>
+    <title>The Gateway - Salt Lake City</title>
 
-        <style>
+    <style>
+        body {
+            background-color: #e7ddd0;
+            color: #785f54;
+            font-family: Georgia;
+            margin: 25px;
+        }
 
-            @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+        header {
+            background-color: #a2b9a7;
+            color: #785f54;
+            text-align: center;
+            padding: 25px;
+            border-radius: 12px;
+        }
 
-            body {
-                background-color: #FFF8EF;
-                margin: 20px;
-                padding: 15px;
-                font-family: "Lora", Georgia, serif;
-                color: #805866;
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .main {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main img {
+            width: 80%;
+            max-width: 850px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .section {
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 12px;
+        }
+
+        #megaplex {
+            background-color: #c6b8a9;
+        }
+
+        #wiseguys {
+            background-color: #a2b9a7;
+        }
+
+        #discovery {
+            background-color: #d4c5b5;
+        }
+
+        #clark_planetarium {
+            background-color: #b8c5bd;
+        }
+
+        #candy_barrel {
+            background-color: #d8c4b0;
+        }
+
+        #uptown {
+            background-color: #c4b9b0;
+        }
+
+        #gateway_photos {
+            background-color: #a2b9a7;
+        }
+
+        .photo_gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .photo_gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #785f54;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-family: Georgia;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a2b9a7;
+            color: #785f54;
+        }
+
+        #moreInfo {
+            display: none;
+            background-color: #d4c5b5;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        #moreInfo img {
+            width: 70%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .photo_gallery {
+                grid-template-columns: 1fr;
             }
 
-            #header {
-                background-color: #FCE4EC;
-                color: #C9829B;
-                text-align: center;
-                margin: 20px;
-                padding: 20px;
-            }
-
-            #head1 {
-                text-align: center;
-                font-size: 50px;
-                font-weight: bold;
-            }
-
-            #font {
-                font-family: "Lora", Georgia, serif;
-                font-size: 16px;
-                color: #805866;
-            }
-
-            #history-of-crocheting {
-                background-color: #FCE4EC;
-                color: #805866;
-                border: dashed 3px #C9829B;
-                margin: 20px;
-                padding: 20px;
-            }
-
-            #pictures-of-crocheting {
-                background-color: #F5F0E8;
-                color: #A66C82;
-                border: dashed 4px #B7C9AE;
-                margin: 20px;
-                padding: 20px;
-
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-            }
-
-            #pictures-of-crocheting h3 {
-                grid-column: 1 / 3;
-            }
-
-            #pictures-of-crocheting img {
+            .main img {
                 width: 100%;
+                height: 250px;
             }
+        }
+    </style>
+</head>
 
-            #basic-crocheting-suplies {
-                background-color: #EAF0E5;
-                color: #61745C;
-                border: dashed 4px #B7C9AE;
-                margin: 20px;
-                padding: 20px;
-            }
+<body>
 
-            #basic-crocheting-suplies img {
-                width: 300px;
-            }
+    <header>
+        <h1>The Gateway</h1>
+        <h2>Salt Lake City, Utah</h2>
+        <p>A fun place to shop, eat, explore, and make memories!</p>
+    </header>
 
-            a {
-                color: #B45F83;
-            }
+    <div class="main">
+        <h2>Welcome to The Gateway!</h2>
 
-            button {
-                background-color: #e9cbd7;
-                color: #805866;
-                padding: 20px;
-            }
+        <p>
+            The Gateway is a popular shopping and entertainment destination
+            located in downtown Salt Lake City, Utah. It has restaurants,
+            stores, museums, and fun activities for people of all ages.
+            Whether you want to shop, watch a movie, or explore something new,
+            The Gateway has something for everyone.
+        </p>
 
-        </style>
-    </head>
+        <img
+            id="main_photo"
+            src="https://boyer.com/wp-content/uploads/2019/10/Gateway-commercial-development-companies-The-Boyer-Company.jpg"
+            onmouseover="changeImage()"
+            onmouseout="changeBack()"
+            alt="The Gateway in Salt Lake City">
 
-    <body>
+        <p><i>Move your mouse over the picture to see another Gateway photo!</i></p>
+    </div>
 
-        <div id="header">
+    <div class="section" id="gateway_photos">
+        <h2>Why Visit The Gateway?</h2>
 
-            <div id="head1">
-                <h1>CROCHETING 101</h1>
-            </div>
+        <ul>
+            <li>Enjoy shopping at different stores.</li>
+            <li>Watch a movie at Megaplex Luxury Theatres.</li>
+            <li>Visit museums and learn something new.</li>
+            <li>Try different restaurants and places to eat.</li>
+            <li>Have fun with friends and family.</li>
+        </ul>
 
-            <div id="font">
+        <div class="photo_gallery">
+            <img src="https://assets.simpleviewinc.com/simpleview/image/upload/crm/saltlake/Restaurant-Row_CC46D7BD-A403-4B1D-8D880DD363B95171_8bdb0185-bc52-49cb-b3a399b429aeb43a.png"
+                 alt="Restaurant Row at The Gateway">
 
-                <h3>Learn to crochet at your own pace!</h3>
-
-                <a href="https://easycrochet.com/the-best-learn-to-crochet-kits-for-beginners/">
-                    Here is another beginner-friendly website to look at!
-                </a>
-
-                <p>
-                    Crocheting can be a hard skill to learn, but it is worth it
-                    in the end. From mesh stitch to the magic ring, anything
-                    can be made with the right teaching. Once you start,
-                    you might never want to stop!
-                </p>
-
-            </div>
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/sltrib/GO5TAME3XNHZBALSZELBMV6ORI.jpg"
+                 alt="Gateway photo">
         </div>
 
-        <div id="history-of-crocheting">
+        <button id="showMore" onclick="show()">Learn More About The Gateway</button>
 
-            <h3>History of Crocheting</h3>
+        <div id="moreInfo">
+            <h2>Explore Even More!</h2>
 
             <p>
-                One of the earliest known crochet instruction manuals
-                was published in 1823. Over time, crocheting became
-                a popular craft around the world. Today, people crochet
-                clothing, blankets, decorations, and many other things.
+                The Gateway has many different places to explore. You can
+                spend the day shopping, eating, visiting attractions, or
+                enjoying entertainment. It is a great place to make a whole
+                day out of your visit to Salt Lake City!
             </p>
 
-        </div>
-
-        <div id="pictures-of-crocheting">
-
-            <h3>Pictures of Crocheting</h3>
-
-            <div>
-                <img
-                    src="https://tse4.mm.bing.net/th/id/OIP.9gqDPLtcB36Z8eAnujn2TwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-                    alt="Yarn and crafting supplies"
-                >
-            </div>
-
-            <div>
-                <img
-                    src="https://www.sheknows.com/wp-content/uploads/2020/05/best-crochet-pattern-books-amazon.jpg?w=1137"
-                    alt="Handmade craft project"
-                >
-            </div>
-
-        </div>
-
-        <div id="basic-crocheting-suplies">
-
-            <h3>Basic Crocheting Supplies</h3>
-
             <img
-                src="https://i.etsystatic.com/35418212/r/il/fbc20e/4864343425/il_fullxfull.4864343425_49st.jpg"
-                alt="Crochet hooks"
-                id="crocheting"
-                onmouseover="changeImage()"
-                onmouseout="changeBack()"
-            >
-
-            <ul>
-                <li>crochet hook</li>
-                <li>yarn</li>
-                <li>a good mind set</li>
-                <li>a lot of positivity</li>
-                <li>and a lot of fun!</li>
-            </ul>
-
-            <br>
-
-            <button id="showMore" onclick="show()">Learn More About Crocheting</button>
-
-            <div id="moreInfo" style="display:none;">
-
-                <p>
-                    Crocheting is a fun and creative hobby that allows
-                    people to make their own handmade projects. You can
-                    create blankets, clothes, stuffed animals, and gifts
-                    using just yarn and a crochet hook!
-                </p>
-
-                <img
-                    src="https://images.pexels.com/photos/4210854/pexels-photo-4210854.jpeg"
-                    alt="A handmade crochet project"
-                >
-
-            </div>
-
-            <script>
-
-                let images = [
-                    "https://tse2.mm.bing.net/th/id/OIP.NlDZKHv6XXDPo8MFlVPGjwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
-                    "https://i.etsystatic.com/35418212/r/il/fbc20e/4864343425/il_fullxfull.4864343425_49st.jpg"
-                ];
-
-                function changeImage() {
-                    document.getElementById("crocheting").src = images[0];
-                }
-
-                function changeBack() {
-                    document.getElementById("crocheting").src = images[1];
-                }
-
-                function show() {
-                    let element = document.getElementById("moreInfo");
-
-                    if (element.style.display == "block") {
-                        element.style.display = "none";
-                        document.getElementById("showMore").innerHTML = "Learn More About Crocheting";
-                    } else {
-                        element.style.display = "block";
-                        document.getElementById("showMore").innerHTML = "Show Less";
-                    }
-                }
-
-            </script>
-
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSBpE4mmH8I5JoohK2HWlKyOf_LKOeHXSfs3whUvyqYRZwUGAkhbHg4M4&s=10"
+                alt="More about The Gateway">
         </div>
+    </div>
 
-    </body>
+    <div class="section" id="megaplex">
+        <h2>Megaplex Luxury Theatres</h2>
+
+        <p>
+            Megaplex at The Gateway is a great place to watch a movie.
+            It is a fun activity to do with friends or family, especially
+            when you want to relax and enjoy a new movie.
+        </p>
+
+        <div class="photo_gallery">
+            <img src="https://cpbuild.com/wp-content/uploads/2024/10/megaplex-luxury-theatres-at-the-gateway-2.jpg"
+                 alt="Megaplex Luxury Theatres">
+
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/XZqO6jN3NBP--OqTG3zIzA/348s.jpg"
+                 alt="Megaplex photo">
+
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/AhZQJ2bAqRsDezvh076eZA/348s.jpg"
+                 alt="Megaplex photo">
+
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/H5NbkGtPNRLSEGxjoVZm3w/348s.jpg"
+                 alt="Megaplex photo">
+        </div>
+    </div>
+
+    <div class="section" id="wiseguys">
+        <h2>Wiseguys Comedy Club</h2>
+
+        <p>
+            Wiseguys Comedy Club is a fun place to enjoy live comedy.
+            You can watch comedians perform and spend an entertaining
+            evening laughing with friends or family.
+        </p>
+
+        <div class="photo_gallery">
+            <img src="https://www.wiseguyscomedy.com/_next/image?url=%2Fimages%2Fvenues%2Fsalt-lake-city.jpeg&w=640&q=75"
+                 alt="Wiseguys Salt Lake City">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqigG6dAGS2hCCYVryG279iK2c87LaY8PB73Rewk7lvH8A7o-UgfQzlSrG&s=10"
+                 alt="Wiseguys Comedy Club">
+        </div>
+    </div>
+
+    <div class="section" id="discovery">
+        <h2>Discovery Gateway Children's Museum</h2>
+
+        <p>
+            Discovery Gateway Children's Museum is a place where kids can
+            learn through hands-on activities and interactive exhibits.
+            It is a fun place for families to explore, create, and discover
+            new things together.
+        </p>
+
+        <div class="photo_gallery">
+            <img src="https://assets.simpleviewinc.com/simpleview/image/upload/crm/saltlake/Museum_1_80DA963B-BF39-4768-BF09DCFECE3888BA_09508ba3-3599-4a5e-be90ace794ab8e49.jpg"
+                 alt="Discovery Gateway Children's Museum">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsLrZ--fjacAu7cV3Ys3oEer0_WN1Nu_u_Md_s71bomCu1q4syXK7KZ7gb&s=10"
+                 alt="Museum photo">
+        </div>
+    </div>
+
+    <div class="section" id="clark_planetarium">
+        <h2>Clark Planetarium</h2>
+
+        <p>
+            Clark Planetarium is a great place to learn about space,
+            planets, and the universe. Visitors can explore exhibits
+            and discover interesting facts about astronomy and science.
+        </p>
+
+        <div class="photo_gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Clark_Planetarium_at_The_Gateway.JPG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
+                 alt="Clark Planetarium at The Gateway">
+        </div>
+    </div>
+
+    <div class="section" id="candy_barrel">
+        <h2>Candy Barrel</h2>
+
+        <p>
+            Candy Barrel is a sweet stop for anyone who loves candy.
+            It is a fun place to look around and find different treats
+            while visiting The Gateway.
+        </p>
+
+        <div class="photo_gallery">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/62/bd/1e/photo0jpg.jpg?w=1200&h=-1&s=1"
+                 alt="Gateway photo">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsLrZ--fjacAu7cV3Ys3oEer0_WN1Nu_u_Md_s71bomCu1q4syXK7KZ7gb&s=10"
+                 alt="Gateway attraction photo">
+        </div>
+    </div>
+
+    <div class="section" id="uptown">
+        <h2>Uptown Cheapskate</h2>
+
+        <p>
+            Uptown Cheapskate is a secondhand clothing store where visitors
+            can shop for clothing and accessories. It is a fun place to
+            browse and find something different.
+        </p>
+
+        <div class="photo_gallery">
+            <img src="https://www.uptowncheapskate.com/wp-content/uploads/UC_SugarHouseUT.jpeg"
+                 alt="Uptown Cheapskate store">
+
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/sltrib/GO5TAME3XNHZBALSZELBMV6ORI.jpg"
+                 alt="Shopping at The Gateway">
+        </div>
+    </div>
+
+    <footer>
+        <p>Come explore The Gateway in Salt Lake City, Utah!</p>
+    </footer>
+
+    <script>
+        let images = [
+            "https://assets.simpleviewinc.com/simpleview/image/upload/crm/saltlake/Restaurant-Row_CC46D7BD-A403-4B1D-8D880DD363B95171_8bdb0185-bc52-49cb-b3a399b429aeb43a.png",
+            "https://boyer.com/wp-content/uploads/2019/10/Gateway-commercial-development-companies-The-Boyer-Company.jpg"
+        ];
+
+        function changeImage() {
+            document.getElementById("main_photo").src = images[0];
+        }
+
+        function changeBack() {
+            document.getElementById("main_photo").src = images[1];
+        }
+
+        function show() {
+            let element = document.getElementById("moreInfo");
+
+            if (element.style.display == "block") {
+                element.style.display = "none";
+                document.getElementById("showMore").innerHTML =
+                    "Learn More About The Gateway";
+            } else {
+                element.style.display = "block";
+                document.getElementById("showMore").innerHTML = "Show Less";
+            }
+        }
+    </script>
+
+</body>
 </html>
+
 
 
