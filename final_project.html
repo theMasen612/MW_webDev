@@ -1,75 +1,143 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Gateway Salt Lake City</title>
+    <title>The Gateway - Salt Lake City</title>
 
     <style>
         body {
             background-color: #e7ddd0;
             color: #785f54;
-            font-family: Arial;
-            margin: 20px;
+            font-family: Georgia;
+            margin: 25px;
         }
 
         header {
             background-color: #a2b9a7;
+            color: #785f54;
             text-align: center;
             padding: 25px;
-            border-radius: 10px;
+            border-radius: 12px;
         }
 
         h1 {
-            color: #785f54;
+            font-size: 40px;
         }
 
         h2 {
-            color: #317371;
+            text-align: center;
         }
 
-        section {
-            background-color: white;
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .main {
+            text-align: center;
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
         }
 
-        img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        #main_photo {
-            width: 100%;
-            max-height: 450px;
+        .main img {
+            width: 80%;
+            max-width: 850px;
+            height: 350px;
             object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .section {
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 12px;
+        }
+
+        #megaplex {
+            background-color: #c6b8a9;
+        }
+
+        #wiseguys {
+            background-color: #a2b9a7;
+        }
+
+        #discovery {
+            background-color: #d4c5b5;
+        }
+
+        #clark_planetarium {
+            background-color: #b8c5bd;
+        }
+
+        #candy_barrel {
+            background-color: #d8c4b0;
+        }
+
+        #uptown {
+            background-color: #c4b9b0;
+        }
+
+        #gateway_photos {
+            background-color: #a2b9a7;
         }
 
         .photo_gallery {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
+            margin-top: 15px;
+        }
+
+        .photo_gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         button {
+            background-color: #785f54;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-family: Georgia;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
             background-color: #a2b9a7;
             color: #785f54;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            margin: 10px;
         }
 
         #moreInfo {
             display: none;
+            background-color: #d4c5b5;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        #moreInfo img {
+            width: 70%;
+            max-width: 600px;
+            border-radius: 10px;
         }
 
         footer {
-            background-color: #a2b9a7;
             text-align: center;
-            padding: 15px;
-            border-radius: 10px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .photo_gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .main img {
+                width: 100%;
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -79,241 +147,134 @@
     <header>
         <h1>The Gateway</h1>
         <h2>Salt Lake City, Utah</h2>
-        <p>A fun place to explore, shop, eat, and make memories!</p>
+        <p>A fun place to shop, eat, explore, and make memories!</p>
     </header>
 
-    <section>
+    <div class="main">
         <h2>Welcome to The Gateway!</h2>
 
         <p>
-            The Gateway is a fun entertainment and shopping destination
+            The Gateway is a popular shopping and entertainment destination
             located in downtown Salt Lake City, Utah. It has restaurants,
-            stores, museums, entertainment, and fun places to visit.
-            Whether you want to go shopping, watch a movie, explore a museum,
-            or spend time with friends and family, The Gateway has something
-            for everyone. It is a great place to visit when traveling to Utah!
+            stores, museums, and fun activities for people of all ages.
+            Whether you want to shop, watch a movie, or explore something new,
+            The Gateway has something for everyone.
         </p>
 
         <img
             id="main_photo"
-            src="https://propzone-prod-images.sfo3.digitaloceanspaces.com/listings/115949/20260327_034020_c2520427.webp"
-            alt="The Gateway in Salt Lake City"
+            src="https://boyer.com/wp-content/uploads/2019/10/Gateway-commercial-development-companies-The-Boyer-Company.jpg"
             onmouseover="changeImage()"
             onmouseout="changeBack()"
-        >
-    </section>
+            alt="The Gateway in Salt Lake City">
 
-    <section id="places_at_gate">
-        <h2>Places to Visit at The Gateway</h2>
+        <p><i>Move your mouse over the picture to see another Gateway photo!</i></p>
+    </div>
+
+    <div class="section" id="gateway_photos">
+        <h2>Why Visit The Gateway?</h2>
 
         <ul>
-            <li>Clark Planetarium</li>
-            <li>Candy Barrel</li>
-            <li>Uptown Cheapskate</li>
-            <li>Discovery Gateway Children's Museum</li>
-            <li>Megaplex Theatres</li>
-            <li>Wiseguys Comedy Club</li>
+            <li>Enjoy shopping at different stores.</li>
+            <li>Watch a movie at Megaplex Luxury Theatres.</li>
+            <li>Visit museums and learn something new.</li>
+            <li>Try different restaurants and places to eat.</li>
+            <li>Have fun with friends and family.</li>
         </ul>
 
-        <p>Here are six fun places to explore during your visit!</p>
-    </section>
+        <div class="photo_gallery">
+            <img src="https://assets.simpleviewinc.com/simpleview/image/upload/crm/saltlake/Restaurant-Row_CC46D7BD-A403-4B1D-8D880DD363B95171_8bdb0185-bc52-49cb-b3a399b429aeb43a.png"
+                 alt="Restaurant Row at The Gateway">
 
-    <section>
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/sltrib/GO5TAME3XNHZBALSZELBMV6ORI.jpg"
+                 alt="Gateway photo">
+        </div>
+
+        <button id="showMore" onclick="show()">Learn More About The Gateway</button>
+
+        <div id="moreInfo">
+            <h2>Explore Even More!</h2>
+
+            <p>
+                The Gateway has many different places to explore. You can
+                spend the day shopping, eating, visiting attractions, or
+                enjoying entertainment. It is a great place to make a whole
+                day out of your visit to Salt Lake City!
+            </p>
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSBpE4mmH8I5JoohK2HWlKyOf_LKOeHXSfs3whUvyqYRZwUGAkhbHg4M4&s=10"
+                alt="More about The Gateway">
+        </div>
+    </div>
+
+    <div class="section" id="megaplex">
+        <h2>Megaplex Luxury Theatres</h2>
+
+        <p>
+            Megaplex at The Gateway is a great place to watch a movie.
+            It is a fun activity to do with friends or family, especially
+            when you want to relax and enjoy a new movie.
+        </p>
+
+        <div class="photo_gallery">
+            <img src="https://cpbuild.com/wp-content/uploads/2024/10/megaplex-luxury-theatres-at-the-gateway-2.jpg"
+                 alt="Megaplex Luxury Theatres">
+
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/XZqO6jN3NBP--OqTG3zIzA/348s.jpg"
+                 alt="Megaplex photo">
+
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/AhZQJ2bAqRsDezvh076eZA/348s.jpg"
+                 alt="Megaplex photo">
+
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/H5NbkGtPNRLSEGxjoVZm3w/348s.jpg"
+                 alt="Megaplex photo">
+        </div>
+    </div>
+
+    <div class="section" id="wiseguys">
+        <h2>Wiseguys Comedy Club</h2>
+
+        <p>
+            Wiseguys Comedy Club is a fun place to enjoy live comedy.
+            You can watch comedians perform and spend an entertaining
+            evening laughing with friends or family.
+        </p>
+
+        <div class="photo_gallery">
+            <img src="https://www.wiseguyscomedy.com/_next/image?url=%2Fimages%2Fvenues%2Fsalt-lake-city.jpeg&w=640&q=75"
+                 alt="Wiseguys Salt Lake City">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqigG6dAGS2hCCYVryG279iK2c87LaY8PB73Rewk7lvH8A7o-UgfQzlSrG&s=10"
+                 alt="Wiseguys Comedy Club">
+        </div>
+    </div>
+
+    <div class="section" id="discovery">
+        <h2>Discovery Gateway Children's Museum</h2>
+
+        <p>
+            Discovery Gateway Children's Museum is a place where kids can
+            learn through hands-on activities and interactive exhibits.
+            It is a fun place for families to explore, create, and discover
+            new things together.
+        </p>
+
+        <div class="photo_gallery">
+            <img src="https://assets.simpleviewinc.com/simpleview/image/upload/crm/saltlake/Museum_1_80DA963B-BF39-4768-BF09DCFECE3888BA_09508ba3-3599-4a5e-be90ace794ab8e49.jpg"
+                 alt="Discovery Gateway Children's Museum">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsLrZ--fjacAu7cV3Ys3oEer0_WN1Nu_u_Md_s71bomCu1q4syXK7KZ7gb&s=10"
+                 alt="Museum photo">
+        </div>
+    </div>
+
+    <div class="section" id="clark_planetarium">
         <h2>Clark Planetarium</h2>
 
         <p>
             Clark Planetarium is a great place to learn about space,
-            planets, stars, and the universe. Visitors can explore
-            interesting exhibits and watch educational shows.
-            It is a fun experience for anyone who enjoys science
-            and discovering new things.
+            planets, and the universe. Visitors can explore exhibits
+            and discover interesting facts about astronomy and science.
         </p>
-
-        <div class="photo_gallery">
-            <img
-                src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa"
-                alt="Earth from space"
-            >
-
-            <img
-                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
-                alt="Space and Earth"
-            >
-        </div>
-    </section>
-
-    <section id="candy_barrel">
-        <h2>Candy Barrel</h2>
-
-        <p>
-            Candy Barrel is a fun place to stop if you have a sweet tooth.
-            You can find different kinds of candy and treats to enjoy.
-            It is a great place to visit with friends or family
-            while exploring The Gateway.
-        </p>
-
-        <div class="photo_gallery">
-            <img
-                src="https://images.unsplash.com/photo-1582058091505-f87a2e55a40f"
-                alt="Colorful candy"
-            >
-
-            <img
-                src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47"
-                alt="Candy and sweets"
-            >
-        </div>
-    </section>
-
-    <section>
-        <h2>Uptown Cheapskate</h2>
-
-        <p>
-            Uptown Cheapskate is a fun thrift shopping store where
-            visitors can look for clothing and accessories.
-            It is a great place to explore different styles
-            and find something unique.
-        </p>
-
-        <div class="photo_gallery">
-            <img
-                src="https://images.unsplash.com/photo-1483985988355-763728e1935b"
-                alt="Clothing shopping"
-            >
-
-            <img
-                src="https://images.unsplash.com/photo-1445205170230-053b83016050"
-                alt="Clothing store"
-            >
-        </div>
-    </section>
-
-    <section>
-        <h2>Discovery Gateway Children's Museum</h2>
-
-        <p>
-            Discovery Gateway Children's Museum is an interactive
-            museum where kids can learn while having fun.
-            It has hands-on exhibits that encourage creativity,
-            imagination, and exploring new things.
-            It is a great place for families to visit.
-        </p>
-
-        <div class="photo_gallery">
-            <img
-                src="discovery1.jpeg"
-                alt="The Pollinator exhibit at Discovery Gateway"
-            >
-
-            <img
-                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9"
-                alt="Children exploring and playing"
-            >
-        </div>
-    </section>
-
-    <section>
-        <h2>Megaplex Theatres</h2>
-
-        <p>
-            Megaplex Theatres is a great place to watch movies
-            and spend time with friends or family.
-            You can enjoy a movie, get snacks, and relax
-            after exploring the other attractions at The Gateway.
-        </p>
-
-        <div class="photo_gallery">
-            <img
-                src="megaplex.jpg"
-                alt="Megaplex at Jordan Commons"
-            >
-
-            <img
-                src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba"
-                alt="Movie theater"
-            >
-        </div>
-    </section>
-
-    <section>
-        <h2>Wiseguys Comedy Club</h2>
-
-        <p>
-            Wiseguys Comedy Club is a fun place to enjoy live comedy
-            and entertainment. Visitors can watch comedians perform
-            and enjoy a night of laughter. It is a unique experience
-            for people looking for something different to do.
-        </p>
-
-        <div class="photo_gallery">
-            <img
-                src="wiseguys1.jpeg"
-                alt="Wiseguys Comedy Club sign"
-            >
-
-            <img
-                src="wiseguys2.jpeg"
-                alt="Inside Wiseguys Comedy Club"
-            >
-        </div>
-    </section>
-
-    <section>
-        <h2>Want to Learn More?</h2>
-
-        <button id="showMore" onclick="show()">
-            Learn More About The Gateway
-        </button>
-
-        <div id="moreInfo">
-            <p>
-                The Gateway is located in downtown Salt Lake City
-                and is a great place to spend a day exploring.
-                You can visit different attractions, shop,
-                eat, and enjoy entertainment all in one area.
-                There is always something new to discover!
-            </p>
-
-            <img
-                src="gateway-hover.jpg"
-                alt="The Gateway fountain and shopping area"
-            >
-        </div>
-    </section>
-
-    <footer>
-        <p>Visit The Gateway in Salt Lake City, Utah!</p>
-    </footer>
-
-    <script>
-        let images = [
-            "gateway-hover.jpg",
-            "https://propzone-prod-images.sfo3.digitaloceanspaces.com/listings/115949/20260327_034020_c2520427.webp"
-        ];
-
-        function changeImage() {
-            document.getElementById("main_photo").src = images[0];
-        }
-
-        function changeBack() {
-            document.getElementById("main_photo").src = images[1];
-        }
-
-        function show() {
-            let element = document.getElementById("moreInfo");
-
-            if (element.style.display == "block") {
-                element.style.display = "none";
-                document.getElementById("showMore").innerHTML =
-                    "Learn More About The Gateway";
-            } else {
-                element.style.display = "block";
-                document.getElementById("showMore").innerHTML =
-                    "Show Less";
-            }
-        }
-    </script>
-
-</body>
-</html>
 
